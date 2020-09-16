@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "firebase serve --only hosting --port 5002"
+    "dev": "firebase serve --only hosting --port 5002",
+    "deploy": "firebase deploy"
   },
   "author": "",
   "license": "ISC"
