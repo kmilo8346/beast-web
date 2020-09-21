@@ -62,6 +62,7 @@
           if (!redirect){
             throw new Error('Beast redirect must be defined')
           }
+          var redirectUrl = parseUrl(redirect);
 
           var id = url.query['collection_id'];
           if (id === 'null') {
@@ -87,11 +88,10 @@
               status = 'rejected'
               break;  
             default:
-              throw new Error('Mercado pago status not mapped, status:' + checkoutStatus)
+              status = 'not_mapped'
               break;
           }
           
-          var redirectUrl = parseUrl(redirect);
           window.location.replace(createUrl(redirectUrl.base, {id: id, status: status, checkout: JSON.stringify(url.query)}));
         } catch (e) {
           console.error(e)
