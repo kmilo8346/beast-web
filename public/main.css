@@ -336,21 +336,21 @@ h6 {
 .full-width-img {
   width: 700px;
 }
+.downloads {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
 
 @media screen and (max-width: 1680px) {
   h1 {
     font-size: 3.5em;
   }
-  .downloads {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 .download-link {
-  margin-bottom: 5em;
+  margin-bottom: 1em;
   margin-right: 1em;
 }
 
@@ -361,12 +361,6 @@ h6 {
   .full-width-img {
     width: 500px;
   }
-}
-.downloads {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
 }
 @media screen and (max-width: 736px) {
   h1 {
@@ -391,6 +385,19 @@ h6 {
 @media screen and (max-width: 520px) {
   .full-width-img {
     width: 400px;
+  }
+  .downloads {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .full-width-img {
+    width: 300px;
   }
 }
 
