@@ -12,5 +12,71 @@
     <div style="display: flex;justify-content: center;align-items: center;height: 400px;">
       <h4 style="text-align: center;">Redirecting...</h4>
     </div>
+
+    <script>	
+      function parseUrl(url) {	
+        var parts = url.split('?');	
+        if (parts.length === 1) {	
+          return {	
+            base: parts[0],	
+            query: {}	
+          }	
+        }	
+        var params = parts[1].split('&');	
+        var query = {};	
+        for (var i = 0; i < params.length; i++) {	
+          var param = params[i];	
+          var paramParts = param.split('=');	
+          query[paramParts[0]] = decodeURI(paramParts[1]);	
+        }	
+        return {	
+          base: parts[0],	
+          query: query ,	
+        }	
+      }	
+
+      function createUrl(base, query) {	
+        var url = base;	
+        var keys = Object.keys(query);	
+        var added = false;	
+        for (var i = 0; i < keys.length; i++) {	
+          var key = keys[i];	
+          var value = query[key];	
+          if (added) {	
+            url = url + '&'	
+          } else {	
+            url = url + '?';	
+            added = true;	
+          }	
+          url = url + key + '=' + value;	
+        }	
+        return url;	
+      }	
+
+      document.addEventListener('DOMContentLoaded', function() {	
+        try {	
+          var url = parseUrl(window.location.href);	
+          var redirect = '';	
+
+          var state = url.query['state'];	
+          if (!state){	
+            throw new Error('State must be defined')	
+          }	
+
+          var code = url.query['code'];	
+          if (!code){	
+            redirect = state + '?status=fail&message=code must be defined';	
+            window.location.replace(redirect);	
+            return;	
+          }	
+
+          redirect = state + '?status=ok&code=' + code;	
+          window.location.replace(redirect);	
+        } catch (e) {	
+          console.error(e)	
+        }	
+
+      });	
+    </script>
   </body>
 </html>
