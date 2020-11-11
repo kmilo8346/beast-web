@@ -73,8 +73,12 @@
       Raven.config("https://1b8a4f479bfe4f3894cfe4d8213c16eb@o451487.ingest.sentry.io/5449198").install();
       
       Raven.context(function() {
+        Raven.captureMessage('bueno' + window.location.href);
         document.addEventListener("DOMContentLoaded", function () {
           try {
+            
+
+
             var url = parseUrl(window.location.href);
 
             var redirect = url.query["beast_redirect"];
