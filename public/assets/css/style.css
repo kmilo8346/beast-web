@@ -86,7 +86,7 @@ html {
 }
 .fh5co-hero-inner .download-hero > h4 {
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .fh5co-hero-inner .download-app-store {
   margin-bottom: 10px;
@@ -112,7 +112,7 @@ html {
   overflow: hidden;
 }
 .fh5co-advantages-outer .span-perfect {
-  color: #648cff;
+  color: #457aff;
   text-transform: uppercase;
   font-size: 27px;
   letter-spacing: 1px;
@@ -138,7 +138,7 @@ html {
   padding-right: 30px;
   position: relative;
   top: 1px;
-  color: #648cff;
+  color: #457aff;
 }
 .fh5co-advantages-outer .fh5co-advantages-grid-columns .col-sm-4 .grid-title {
   float: left;
@@ -169,7 +169,7 @@ html {
   padding: 70px;
 }
 .fh5co-slider-outer h1 {
-  color: #648cff;
+  color: #457aff;
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 600;
@@ -231,7 +231,7 @@ html {
   position: relative;
 }
 .fh5co-features-outer .sm-6-content h1 {
-  color: #648cff;
+  color: #457aff;
   text-transform: uppercase;
   font-size: 25px;
   font-weight: 600;
@@ -387,7 +387,7 @@ html {
   margin-top: 100px;
 }
 .fh5co-reviews-outer > h1 {
-  color: #648cff;
+  color: #457aff;
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 600;
@@ -922,7 +922,6 @@ html {
   .fh5co-hero-inner .fh5co-hero-smartphone {
     height: 550px;
     top: 360px;
-    margin-top: 70px;
     right: 0;
     left: 0;
     margin-left: auto;
@@ -938,7 +937,7 @@ html {
   }
 
   .fh5co-advantages-outer {
-    margin-top: 240px;
+    margin-top: 140px;
   }
 
   .fh5co-slider-outer .carousel-left-arrow {
@@ -975,7 +974,7 @@ html {
   .fh5co-advantages-outer .span-features {
     font-size: 24px;
     display: block;
-    width: 110%;
+    width: 100%;
     text-align: center;
   }
 
@@ -986,16 +985,28 @@ html {
 
 @media screen and (max-width: 414px) {
   .fh5co-hero-inner .fh5co-hero-smartphone {
-    top: 460px;
-    margin-top: 70px;
+    top: 350px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .fh5co-hero-inner .fh5co-hero-smartphone {
+    top: 410px;
+  }
+
+  .fh5co-advantages-outer {
+    margin-top: 240px;
+  }
+
+  .fh5co-hero-inner .download-google-play {
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 280px) {
   .fh5co-hero-inner .fh5co-hero-smartphone {
     height: 400px;
-    top: 510px;
-    margin-top: 70px;
+    top: 500px;
   }
 
   .fh5co-advantages-outer .span-perfect {
@@ -1003,6 +1014,6 @@ html {
   }
 
   .fh5co-advantages-outer .span-features {
-    width: 140%;
+    font-size: 20px;
   }
 }
